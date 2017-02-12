@@ -12,6 +12,7 @@
 		145116181E5088320064A07F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 145116161E5088320064A07F /* Main.storyboard */; };
 		1451161A1E5088320064A07F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 145116191E5088320064A07F /* Assets.xcassets */; };
 		1451161D1E5088320064A07F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1451161B1E5088320064A07F /* LaunchScreen.storyboard */; };
+		8C9C0242C57E5BFBBFCBC2D4 /* Pods_LTMorphingLabelSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A531D08CFD8C320F3BA34F /* Pods_LTMorphingLabelSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		145116191E5088320064A07F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1451161C1E5088320064A07F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1451161E1E5088320064A07F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BB62850FFC083DA394A2E79 /* Pods-LTMorphingLabelSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTMorphingLabelSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LTMorphingLabelSample/Pods-LTMorphingLabelSample.debug.xcconfig"; sourceTree = "<group>"; };
+		2938500AC383597407AE2791 /* Pods-LTMorphingLabelSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTMorphingLabelSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTMorphingLabelSample/Pods-LTMorphingLabelSample.release.xcconfig"; sourceTree = "<group>"; };
+		B9A531D08CFD8C320F3BA34F /* Pods_LTMorphingLabelSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LTMorphingLabelSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9C0242C57E5BFBBFCBC2D4 /* Pods_LTMorphingLabelSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				145116111E5088320064A07F /* LTMorphingLabelSample */,
 				145116101E5088320064A07F /* Products */,
+				D9169E11BB6F10BC13D328E8 /* Pods */,
+				E3827175588FD61952B3395A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = LTMorphingLabelSample;
 			sourceTree = "<group>";
 		};
+		D9169E11BB6F10BC13D328E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BB62850FFC083DA394A2E79 /* Pods-LTMorphingLabelSample.debug.xcconfig */,
+				2938500AC383597407AE2791 /* Pods-LTMorphingLabelSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E3827175588FD61952B3395A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9A531D08CFD8C320F3BA34F /* Pods_LTMorphingLabelSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 145116211E5088320064A07F /* Build configuration list for PBXNativeTarget "LTMorphingLabelSample" */;
 			buildPhases = (
+				BA19A8522DE84D28B1101EEE /* [CP] Check Pods Manifest.lock */,
 				1451160B1E5088320064A07F /* Sources */,
 				1451160C1E5088320064A07F /* Frameworks */,
 				1451160D1E5088320064A07F /* Resources */,
+				D86C790AE68FC76E9C7FB76B /* [CP] Embed Pods Frameworks */,
+				CEFBA721CC0B9D658213A834 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA19A8522DE84D28B1101EEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CEFBA721CC0B9D658213A834 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LTMorphingLabelSample/Pods-LTMorphingLabelSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D86C790AE68FC76E9C7FB76B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LTMorphingLabelSample/Pods-LTMorphingLabelSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1451160B1E5088320064A07F /* Sources */ = {
@@ -257,6 +332,7 @@
 		};
 		145116221E5088320064A07F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BB62850FFC083DA394A2E79 /* Pods-LTMorphingLabelSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G9ZJ787Q67;
@@ -270,6 +346,7 @@
 		};
 		145116231E5088320064A07F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2938500AC383597407AE2791 /* Pods-LTMorphingLabelSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G9ZJ787Q67;
