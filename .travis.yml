@@ -1,0 +1,12 @@
+language: objective-c
+osx_image: xcode8.2
+xcode_workspace: LTMorphingLabelSample.xcworkspace
+xcode_scheme: LTMorphingLabelSample
+
+xcode_workspace: PNChart.xcworkspace
+xcode_scheme: PNChart
+xcode_sdk: iphonesimulator
+
+notifications:
+  email:
+      - test@example.com

@@ -1,0 +1,6 @@
+framework module Pods_LTMorphingLabelSample {
+  umbrella header "Pods-LTMorphingLabelSample-umbrella.h"
+
+  export *
+  module * { export * }
+}
