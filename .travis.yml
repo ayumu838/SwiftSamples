@@ -6,3 +6,7 @@ xcode_scheme: LTMorphingLabelSample
 xcode_workspace: PNChart.xcworkspace
 xcode_scheme: PNChart
 xcode_sdk: iphonesimulator
+
+notifications:
+  email:
+      - test@example.com
